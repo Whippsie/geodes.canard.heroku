@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/geodes.canard/src" modelPluginID="geodes.canard"
+    modelName="Canard" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>canard.emf</foreignModel>
+  <genPackages prefix="Canard" disposableProviderFactory="true" ecorePackage="canard.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="canard.ecore#//FeatureRelationType">
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//FeatureRelationType/REQUIRES"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//FeatureRelationType/PROHIBITS"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//FeatureRelationType/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//FeatureRelationType/OR"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//FeatureRelationType/XOR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="canard.ecore#//Boolnull">
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//Boolnull/TRUE"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//Boolnull/FALSE"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//Boolnull/NAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="canard.ecore#//ValueType">
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//ValueType/Boolnull"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//ValueType/String"/>
+      <genEnumLiterals ecoreEnumLiteral="canard.ecore#//ValueType/List"/>
+    </genEnums>
+    <genClasses ecoreClass="canard.ecore#//CanardModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//CanardModel/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//CanardModel/blocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//CanardModel/flags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//CanardModel/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//CanardModel/configurations"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Topic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Topic/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Topic/uniqueID"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Flag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Flag/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//Flag/child"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Flag/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Flag/isAbstract"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Block">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Block/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//Block/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//Block/topics"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Rel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canard.ecore#//Rel/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canard.ecore#//Rel/tgt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Rel/name"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Attribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Configuration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Configuration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canard.ecore#//Configuration/configflags"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//Constraint/feature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canard.ecore#//Constraint/cons_flags"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//FlagToEBooleanMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canard.ecore#//FlagToEBooleanMap/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canard.ecore#//FlagToEBooleanMap/key"/>
+    </genClasses>
+    <genClasses ecoreClass="canard.ecore#//BadTopic"/>
+  </genPackages>
+</genmodel:GenModel>

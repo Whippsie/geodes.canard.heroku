@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<canard:CanardModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:canard="http://iro.umontreal.ca/canard">
+  <links src="1" tgt="2"/>
+  <links src="3" tgt="4"/>
+  <blocks name="camera_node">
+    <topics name="camera_info" uniqueID="2"/>
+    <topics name="image/compressed" uniqueID="4"/>
+  </blocks>
+  <blocks name="cam_info_reader_node">
+    <topics name="camera_info" uniqueID="1"/>
+    <topics name="compressed_image" uniqueID="3"/>
+  </blocks>
+  <flags name="Camera" isAbstract="true">
+    <child name="camera"/>
+    <child name="/camera/raw"/>
+    <child name="/camera/cam_info"/>
+    <child name="/camera/raw/rect"/>
+    <child name="/camera/local"/>
+  </flags>
+  <flags name="Specific" isAbstract="true">
+    <child name="wheels"/>
+  </flags>
+  <flags name="Control" isAbstract="true">
+    <child name="joystick"/>
+  </flags>
+  <flags name="Undefined" isAbstract="true">
+    <child name="odometry"/>
+    <child name="/odometry/forward_kinematics"/>
+  </flags>
+  <flags name="LaneFollowing" isAbstract="true">
+    <child name="lane_following"/>
+    <child name="/lane_following/line_detection"/>
+    <child name="/lane_following/ground_projection"/>
+    <child name="/lane_following/lane_filter"/>
+    <child name="/lane_following/stop_line_filter"/>
+    <child name="/lane_following/lane_controller"/>
+  </flags>
+  <configurations>
+    <configflags value="true" key="//@flags.0/@child.0"/>
+    <configflags value="false" key="//@flags.0/@child.1"/>
+    <configflags value="true" key="//@flags.0/@child.2"/>
+    <configflags value="false" key="//@flags.0/@child.3"/>
+    <configflags value="false" key="//@flags.0/@child.4"/>
+    <configflags value="true" key="//@flags.1/@child.0"/>
+    <configflags value="true" key="//@flags.2/@child.0"/>
+    <configflags value="false" key="//@flags.3/@child.0"/>
+    <configflags value="false" key="//@flags.3/@child.1"/>
+    <configflags value="true" key="//@flags.4/@child.0"/>
+    <configflags value="true" key="//@flags.4/@child.1"/>
+    <configflags value="true" key="//@flags.4/@child.2"/>
+    <configflags value="true" key="//@flags.4/@child.3"/>
+    <configflags value="true" key="//@flags.4/@child.4"/>
+    <configflags value="true" key="//@flags.4/@child.5"/>
+  </configurations>
+</canard:CanardModel>

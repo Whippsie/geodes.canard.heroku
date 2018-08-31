@@ -1,0 +1,90 @@
+@gmf
+@namespace(uri="http://iro.umontreal.ca/canard", prefix="canard")
+package canard;
+
+@gmf.diagram
+class CanardModel {
+  val Rel[*] links;
+  val Block[*] blocks;
+  val Flag[*] flags;
+  val Constraint[*] constraints;
+  val Configuration[*] configurations;
+}
+
+@gmf.node(label="name", figure="rounded", color="250,229,150")
+class Topic {
+  attr String[1] name;
+  id attr int uniqueID;
+}
+
+@gmf.node(label="name", figure="rectangle", border.color="0,0,0")
+class Flag {
+  attr String name = "NAN";
+
+  @gmf.compartment
+  val Flag[*] child;
+  attr Boolnull type;
+  attr boolean isAbstract;
+}
+
+@gmf.node(label="name", figure="rectangle", border.color="0,0,0", color="63,176,172", label.color="255,255,255")
+class Block {
+  id attr String[1] name;
+  val Attribute[*] attributes;
+
+  @gmf.affixed
+  val Topic[*] topics;
+}
+
+@gmf.link(label="name", source="src", target="tgt", target.decoration="arrow", width="2")
+class Rel {
+  ref Topic[1] src;
+  ref Topic[1] tgt;
+  id attr String[1] name;
+}
+
+class Attribute {
+  id attr String[1] name;
+  !unique !ordered attr String value;
+}
+
+@gmf.node(label="name", figure="ellipse", border.color="0,0,0", color="255,242,15", label.color="255,255,255")
+class Configuration {
+  attr String name;
+  val FlagToEBooleanMap[*] configflags;
+}
+
+enum FeatureRelationType {
+  REQUIRES = 1;
+  PROHIBITS = 2;
+  AND = 0;
+  OR = 0;
+  XOR = 0;
+}
+
+class Constraint {
+  attr FeatureRelationType feature;
+  ref Flag[*] cons_flags;
+}
+
+enum Boolnull {
+  TRUE = 0;
+  FALSE = 0;
+  NAN = 0;
+}
+
+enum ValueType {
+  Boolnull = 0;
+  String = 0;
+  List = 0;
+}
+
+class FlagToEBooleanMap : java.util.Map$Entry {
+  attr String value;
+  ref Flag key;
+}
+
+@gmf.node(label="name", figure="rounded", color="231,57,23")
+class BadTopic extends Topic {
+}
+
