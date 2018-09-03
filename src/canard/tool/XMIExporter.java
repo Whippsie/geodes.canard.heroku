@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Collections;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -33,8 +34,13 @@ public class XMIExporter {
 		try {
 			resource.save(Collections.EMPTY_MAP);
 		} catch (IOException e) {
+			
 		}
-
+		// Add the initial model object to the contents.
+		EObject rootObject = CanardHelper.model;
+	
+		// Allows to print the information to send to the HTTP request
+		FileReaderTool.readFile(path);
 	}
 
 }

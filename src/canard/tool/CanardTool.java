@@ -35,7 +35,9 @@ public class CanardTool{
 		CanardHelper.initModel();
 		String text = FileReaderTool.readFile(INPUTLAUNCH);
 		parseLaunch(text,null);
-		makeXMI();
+		
+		// Writes a XMI with the GMF's code on the webserver
+		XMIExporter.export(CanardHelper.model, OUTPUTFILE);
 	}
 
 	
@@ -308,32 +310,6 @@ public class CanardTool{
 		
 	}
 	
-	private static void makeXMI() {
-		// Writes a XMI with the GMF's code on the webserver
-		XMIExporter.export(CanardHelper.model, OUTPUTFILE);
-	
-		// Create a resource set
-		ResourceSet resourceSet = new ResourceSetImpl();
-		
-		// Register the default resource factory -- only needed for stand-alone!
-		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
-				.put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-		
-		// Get the URI of the model file.
-		URI fileURI = URI.createFileURI(new File(OUTPUTFILE).getAbsolutePath());
-	
-		// Create a resource for this file.
-		Resource resource = resourceSet.createResource(fileURI);
-		resource.getContents().add(CanardHelper.model);
-		
-		// Add the initial model object to the contents.
-		EObject rootObject = CanardHelper.model;
-	
-		// Allows to print the information to send to the HTTP request
-		FileReaderTool.readFile(OUTPUTFILE);
-	}
-
-
 	private static void incrementID(){
 		uniqueID+=1;
 	}

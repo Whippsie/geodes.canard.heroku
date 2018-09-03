@@ -15,6 +15,8 @@ import canard.Flag;
 public class FlagsBase {
 	static Map<String, ArrayList<String>> dict = new HashMap<String, ArrayList<String>>();
 	public static final String INPUTFLAGS = "input/flags.txt";
+	
+	
 	private static String[] formatArg(String line){
 		line = line.replace("\t", "");
 		line = line.replace("\"/>", "\" />"); //Add space if absent for splitting
@@ -22,7 +24,8 @@ public class FlagsBase {
 		return parts;
 	}
 	
-	//search is either name= or value=
+	// Fetches the flag's value depending on the search parameter
+	// Search is either name= or value=
 	public static String getArgInfo(String line, String search){
 		String[] parts = formatArg(line);
 		String flagInfo = "";
@@ -34,41 +37,7 @@ public class FlagsBase {
 		}
 		return flagInfo;
 	}
-	
-	public static void generateFlags(){
-		initDict();		
-		BufferedReader reader;
-		try {
-			reader = new BufferedReader(new FileReader(
-					INPUTFLAGS));
-			String line = reader.readLine();
-			while (line != null) {
-				System.out.println(line);
-				String flagname = getArgInfo(line, "name=");
-				String category = findCategory(flagname);
-				Flag catFlag = getFlagByName(category);
-				if (catFlag == null){
-					//Category doesn't exist yet, must create it
-					catFlag = makeFlag(category, true);
-					CanardHelper.model.getFlags().add(catFlag);
-				}
-				
-				//Create arg flag
-				Flag currFlag = makeFlag(flagname,false);
-				
-				//Add flags to the model
-				CanardHelper.model.getFlags().add(currFlag);
-				
-				//Link category and flag
-				catFlag.getChild().add(currFlag);
-				
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+
 	public static void generateFlagsText( String text){
 		initDict();		
 		String flagname = getArgInfo(text, "name=");
@@ -118,6 +87,8 @@ public class FlagsBase {
 		}
 		return category;
 	}
+	
+	// Hardcoded dict that can be changed
 	private static void initDict(){
 		int i = 0;
 		ArrayList<String> temp = new ArrayList<String>();
@@ -171,27 +142,15 @@ public class FlagsBase {
 		i++;
 
 	}
-	private static Flag makeFlag(String flagName,boolean abstractVal){
+	
+	
+	// Creates the EObject associated with the parameters
+	private static Flag makeFlag(String flagName, boolean abstractVal){
 		Flag f1 = CanardHelper.factory.createFlag();
-		//String search = "name=\"";
-		//int posArg = line.indexOf(search) + search.length();
-		
-		//Fetch the beginning of the argument name until the second " found in the line
-		//String name = line.substring(posArg,line.indexOf("\"",posArg));
 		f1.setName(flagName);
-		f1.setIsAbstract(abstractVal);
-		//TODO: Complete this
-		//if (line.contains("true") || line.contains("false")){
-			//f1.setValue(boolean);
-		//}
-		
-		//f1.setisAbstract(AbstractVal);
+		f1.setIsAbstract(abstractVal); // True if category, False if feature
 		return f1;
 	}
 
-	
-	private static void compareDemo(String demoName, String text){
-		//Comment faire le lien avec UI sans tout recoder..? Peut comparer 2 structures EObject?
-	}
 	
 }
