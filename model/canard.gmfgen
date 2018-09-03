@@ -10,7 +10,7 @@
     <childNodes xsi:type="gmfgen:GenChildSideAffixedNode" visualID="3001" editPartClassName="BadTopicEditPart" itemSemanticEditPolicyClassName="BadTopicItemSemanticEditPolicy" canonicalEditPolicyClassName="BadTopicCanonicalEditPolicy" graphicalNodeEditPolicyClassName="BadTopicGraphicalNodeEditPolicy" createCommandClassName="BadTopicCreateCommand" containers="//@diagram/@topLevelNodes.0" preferredSideName="NORTH">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="BadTopicEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BadTopicFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BadTopicFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBadTopicLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BadTopicFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureBadTopicLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureBadTopicLabelFigure.setText(&quot;BadTopic&quot;);&#xA;&#xA;this.add(fFigureBadTopicLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBadTopicLabelFigure() {&#xA;&#x9;&#x9;return fFigureBadTopicLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 231, 57, 23);&#xA;&#xA;">
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BadTopicFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BadTopicFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BadTopicFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 231, 57, 23);&#xA;&#xA;">
         <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
       </viewmap>
       <modelFacet>
@@ -18,9 +18,9 @@
         <containmentMetaFeature href="canard.genmodel#//canard/Block/topics"/>
         <childMetaFeature href="canard.genmodel#//canard/Block/topics"/>
       </modelFacet>
-      <labels visualID="5001" editPartClassName="BadTopicNameEditPart" itemSemanticEditPolicyClassName="BadTopicNameItemSemanticEditPolicy" elementIcon="true">
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5001" editPartClassName="BadTopicNameEditPart" itemSemanticEditPolicyClassName="BadTopicNameItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureBadTopicLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="BadTopicLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BadTopicLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BadTopicLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;BadTopic&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="canard.genmodel#//canard/Topic/name"/>
         </modelFacet>
@@ -29,7 +29,7 @@
     <childNodes xsi:type="gmfgen:GenChildSideAffixedNode" visualID="3002" editPartClassName="TopicEditPart" itemSemanticEditPolicyClassName="TopicItemSemanticEditPolicy" canonicalEditPolicyClassName="TopicCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TopicGraphicalNodeEditPolicy" createCommandClassName="TopicCreateCommand" containers="//@diagram/@topLevelNodes.0" preferredSideName="NORTH">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TopicEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TopicFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TopicFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTopicLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TopicFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTopicLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTopicLabelFigure.setText(&quot;Topic&quot;);&#xA;&#xA;this.add(fFigureTopicLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTopicLabelFigure() {&#xA;&#x9;&#x9;return fFigureTopicLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 250, 229, 150);&#xA;&#xA;">
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TopicFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TopicFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TopicFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 250, 229, 150);&#xA;&#xA;">
         <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
       </viewmap>
       <modelFacet>
@@ -37,9 +37,9 @@
         <containmentMetaFeature href="canard.genmodel#//canard/Block/topics"/>
         <childMetaFeature href="canard.genmodel#//canard/Block/topics"/>
       </modelFacet>
-      <labels visualID="5002" editPartClassName="TopicNameEditPart" itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy" elementIcon="true">
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5002" editPartClassName="TopicNameEditPart" itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTopicLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TopicLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TopicLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TopicLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Topic&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="canard.genmodel#//canard/Topic/name"/>
         </modelFacet>
@@ -138,15 +138,6 @@
         <sourceMetaFeature href="canard.genmodel#//canard/Rel/src"/>
         <targetMetaFeature href="canard.genmodel#//canard/Rel/tgt"/>
       </modelFacet>
-      <labels visualID="6001" editPartClassName="RelNameEditPart" itemSemanticEditPolicyClassName="RelNameItemSemanticEditPolicy">
-        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="RelLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RelLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RelLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Rel&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
-        </viewmap>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
-          <metaFeatures href="canard.genmodel#//canard/Rel/name"/>
-        </modelFacet>
-      </labels>
     </links>
     <compartments visualID="7001" editPartClassName="FlagFlagChildCompartmentEditPart" itemSemanticEditPolicyClassName="FlagFlagChildCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="FlagFlagChildCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.2" title="FlagChildCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.1" listLayout="false">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -214,7 +205,7 @@
   </propertySheet>
   <domainGenModel href="canard.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

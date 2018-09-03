@@ -11,7 +11,7 @@ class CanardModel {
   val Configuration[*] configurations;
 }
 
-@gmf.node(label="name", figure="rounded", color="250,229,150")
+@gmf.node(label="name", figure="rounded", color="250,229,150", label.placement="external", label.icon="false")
 class Topic {
   attr String[1] name;
   id attr int uniqueID;
@@ -36,7 +36,7 @@ class Block {
   val Topic[*] topics;
 }
 
-@gmf.link(label="name", source="src", target="tgt", target.decoration="arrow", width="2")
+@gmf.link(source="src", target="tgt", target.decoration="arrow", width="2", label="")
 class Rel {
   ref Topic[1] src;
   ref Topic[1] tgt;

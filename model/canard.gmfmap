@@ -121,13 +121,6 @@
   <links>
     <domainMetaElement
         href="canard.ecore#//Rel"/>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <diagramLabel
-          href="canard.gmfgraph#RelLabel"/>
-      <features
-          href="canard.ecore#//Rel/name"/>
-    </labelMappings>
     <containmentFeature
         href="canard.ecore#//CanardModel/links"/>
     <tool

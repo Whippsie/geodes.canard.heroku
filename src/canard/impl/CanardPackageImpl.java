@@ -763,7 +763,9 @@ public class CanardPackageImpl extends EPackageImpl implements CanardPackage {
 		   new String[] {
 			   "label", "name",
 			   "figure", "rounded",
-			   "color", "250,229,150"
+			   "color", "250,229,150",
+			   "label.placement", "external",
+			   "label.icon", "false"
 		   });
 		addAnnotation
 		  (flagEClass,
@@ -845,11 +847,11 @@ public class CanardPackageImpl extends EPackageImpl implements CanardPackage {
 		  (relEClass,
 		   source,
 		   new String[] {
-			   "label", "name",
 			   "source", "src",
 			   "target", "tgt",
 			   "target.decoration", "arrow",
-			   "width", "2"
+			   "width", "2",
+			   "label", ""
 		   });
 	}
 

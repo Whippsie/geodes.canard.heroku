@@ -53,9 +53,5 @@
   </childNodeTraces>
   <linkTraces
       visualID="4001"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://iro.umontreal.ca/canard' and _eClass_.name = 'Rel')">
-    <linkLabelTraces
-        visualID="6001"
-        queryText="true"/>
-  </linkTraces>
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://iro.umontreal.ca/canard' and _eClass_.name = 'Rel')"/>
 </trace:TraceModel>

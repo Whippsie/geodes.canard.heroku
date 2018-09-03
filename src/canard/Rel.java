@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see canard.CanardPackage#getRel()
- * @model annotation="gmf.link label='name' source='src' target='tgt' target.decoration='arrow' width='2'"
+ * @model annotation="gmf.link source='src' target='tgt' target.decoration='arrow' width='2' label=''"
  * @generated
  */
 public interface Rel extends EObject {

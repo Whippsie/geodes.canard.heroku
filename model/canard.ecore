@@ -20,6 +20,8 @@
       <details key="label" value="name"/>
       <details key="figure" value="rounded"/>
       <details key="color" value="250,229,150"/>
+      <details key="label.placement" value="external"/>
+      <details key="label.icon" value="false"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uniqueID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -59,11 +61,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rel">
     <eAnnotations source="gmf.link">
-      <details key="label" value="name"/>
       <details key="source" value="src"/>
       <details key="target" value="tgt"/>
       <details key="target.decoration" value="arrow"/>
       <details key="width" value="2"/>
+      <details key="label" value=""/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" lowerBound="1" eType="#//Topic"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" lowerBound="1" eType="#//Topic"/>

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see canard.CanardPackage#getTopic()
- * @model annotation="gmf.node label='name' figure='rounded' color='250,229,150'"
+ * @model annotation="gmf.node label='name' figure='rounded' color='250,229,150' label.placement='external' label.icon='false'"
  * @generated
  */
 public interface Topic extends EObject {
